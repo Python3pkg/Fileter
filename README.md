@@ -2,6 +2,7 @@
 Lightweight lib to iterate and process files using multiple sources and filters.
 
 Source at [GitHub](https://github.com/RonenNess/Fileter).
+Docs at [PythonHosted.org](http://pythonhosted.org/fileter/).
 
 ## Install
 
