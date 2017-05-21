@@ -43,7 +43,7 @@ class TestSources(unittest.TestCase):
         """
         # create a custom source
         class TestSource(fileter.sources.SourceAPI):
-            def next(self):
+            def __next__(self):
                 yield "1"
                 yield "2"
                 raise StopIteration

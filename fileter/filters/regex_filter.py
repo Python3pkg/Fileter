@@ -6,7 +6,7 @@ Implement a simple filter by regex expression.
 Author: Ronen Ness.
 Since: 2016.
 """
-from filter_api import FilterAPI
+from .filter_api import FilterAPI
 import re
 
 

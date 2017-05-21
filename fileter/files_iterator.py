@@ -7,8 +7,8 @@ The iteration will iterate over files paths, its up to you to open files etc.
 Author: Ronen Ness.
 Since: 2016
 """
-from sources import *
-from filters import *
+from .sources import *
+from .filters import *
 import os
 
 
@@ -161,7 +161,7 @@ class FilesIterator(object):
         """
         Return self as iterator.
         """
-        return self.next()
+        return next(self)
 
     def get_all(self):
         """
@@ -175,7 +175,7 @@ class FilesIterator(object):
         Use this function if you want to use this iterator with pre-defined processing function, and not
         for external iteration.
         """
-        for _ in self.next():
+        for _ in next(self):
             pass
 
     def dry_run(self):
@@ -185,7 +185,7 @@ class FilesIterator(object):
         and apply filters on them.
         """
         for f in self.next(dryrun=True):
-            print f
+            print(f)
 
     def next(self, dryrun=False):
         """
@@ -209,7 +209,7 @@ class FilesIterator(object):
             self.on_start_source(src, dryrun)
 
             # iterate over files
-            for filename in src.next():
+            for filename in next(src):
 
                 # make sure file pass filters
                 if not self.match_filters(filename):

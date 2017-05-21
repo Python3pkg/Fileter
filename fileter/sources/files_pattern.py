@@ -6,7 +6,7 @@ Implement files source that iterate over folders and return files using fnmatch 
 Author: Ronen Ness.
 Since: 2016.
 """
-from source_api import SourceAPI
+from .source_api import SourceAPI
 import fnmatch
 import os
 
@@ -33,7 +33,7 @@ class PatternSource(SourceAPI):
         self.__ret_files = ret_files
         self.__ret_folders = ret_folders
 
-    def next(self):
+    def __next__(self):
         """
         Return all files in folder.
         """

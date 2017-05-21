@@ -33,7 +33,7 @@ class RemoveFiles(files_iterator.FilesIterator):
             return path
 
         # remove and return file
-        if self.__force or raw_input("Remove file '%s'? [y/N]" % path).lower() == "y":
+        if self.__force or input("Remove file '%s'? [y/N]" % path).lower() == "y":
             os.remove(path)
             return path
 

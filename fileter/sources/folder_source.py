@@ -7,7 +7,7 @@ Author: Ronen Ness.
 Since: 2016.
 """
 
-from source_api import SourceAPI
+from .source_api import SourceAPI
 import os
 import re
 
@@ -38,7 +38,7 @@ class FolderSource(SourceAPI):
         """
         return True
 
-    def next(self):
+    def __next__(self):
         """
         Return all files in folder.
         """

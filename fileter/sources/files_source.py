@@ -6,7 +6,7 @@ Implement a source that is just a single file or a constant list of filenames.
 Author: Ronen Ness.
 Since: 2016.
 """
-from source_api import SourceAPI
+from .source_api import SourceAPI
 
 
 class FileSource(SourceAPI):
@@ -27,7 +27,7 @@ class FileSource(SourceAPI):
         """
         return iter(self.__path)
 
-    def next(self):
+    def __next__(self):
         """
         Return the file.
         """

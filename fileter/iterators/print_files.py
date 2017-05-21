@@ -20,5 +20,5 @@ class PrintFiles(files_iterator.FilesIterator):
         Print files path.
         """
         if not dryrun:
-            print path
+            print(path)
         return path

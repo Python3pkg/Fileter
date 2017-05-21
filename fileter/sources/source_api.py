@@ -24,9 +24,9 @@ class SourceAPI(object):
         Implement the iter function so we'll be able to iterate over this source.
         See python iteratable docs for more info.
         """
-        return self.next()
+        return next(self)
 
-    def next(self):
+    def __next__(self):
         """
         This is the main function you need to implement, which iterate over your source files.
 
